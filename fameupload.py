@@ -72,7 +72,7 @@ def clean(df):
 
 
 def bq_upload(df):
-    df.to_gbq('fame.all_Dec-2020', project_id = 'baines-hager-research', chunksize= 10000, if_exists='append', table_schema=table_schema)
+    df.to_gbq('fame.all_Dec-2020', project_id = 'your_project_id', chunksize= 10000, if_exists='append', table_schema=table_schema)
     print('Uploading #{} to gbq...'.format(out_id))
 
 cols = ['CF_Dividends','CF_Taxation','Cons./Uncons.','Corporation Tax','Current Assets','Current Liabilities','Deferred Tax','Deferred Taxation','Depreciation','''Directors' Remuneration''','Dividends','EBITDA','Fixed Assets','Highest Paid Director','Intangible Assets','Interest Paid','Long Term Debt','National Turnover','Number of employees','Overseas Turnover','Profit (Loss) after Tax','Profit (Loss) before Tax','Profit (Loss) for period [=Net income]','Remuneration','Shareholders Funds','Short Term Loans & Overdrafts','Taxation','Turnover']
