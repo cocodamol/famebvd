@@ -86,6 +86,7 @@ def export_set(start, end):
 
 
 def range(start,end):
+#check web interface and get max numof row allowed to be exported 
     start = start +1730
     end = end + 1730
     return start, end
@@ -108,7 +109,7 @@ if __name__ == "__main__":
     password = "sssssss"
     # replace with password
     start_url= 'https://libguides.kcl.ac.uk/az.php?a=f'
-    start = 257771
+    start = 1
     end = 262962
 
     login(username, password)
