@@ -54,9 +54,9 @@ def export_set(start, end):
         excel.click()
         time.sleep(2)
         # choose range
-        # options = WebDriverWait(driver, 2).until(
-        #     EC.element_to_be_clickable((By.XPATH, '//*[@id="component_RangeOptionSelectedId"]/option[4]')))
-        # options.click()
+        options = WebDriverWait(driver, 2).until(
+            EC.element_to_be_clickable((By.XPATH, '//*[@id="component_RangeOptionSelectedId"]/option[4]')))
+        options.click()
 
 
         file_name = WebDriverWait(driver, 2).until(
