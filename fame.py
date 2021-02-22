@@ -15,6 +15,10 @@ from selenium.webdriver.chrome.options import Options
 
 
 def login(username, password):
+#  logging in the database has to initiate from institution page and log in insitution microsoft 365 account.
+#  To work around  2-step verification use the authenticator app to avoid entering code
+#  watch for approval notification on a device you've verified w yout Ms account
+
     driver.get('https://libguides.kcl.ac.uk/az.php?a=f')
     driver.find_element_by_xpath('//*[@id="s-lg-az-name-f"]/div[5]/div[1]/a').click()
     driver.switch_to.window(driver.window_handles[1])
